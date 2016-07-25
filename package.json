@@ -1,0 +1,32 @@
+{
+  "name": "challonge-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/challonge.js",
+  "scripts": {
+    "build": "babel challonge -d dist",
+    "watch": "babel --watch=./challonge --out-dir=./dist",
+    "test": "mocha --require babel-register || true",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanhhwong/challonge-node.git"
+  },
+  "author": "Alan Wong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alanhhwong/challonge-node/issues"
+  },
+  "homepage": "https://github.com/alanhhwong/challonge-node#readme",
+  "dependencies": {
+    "request-promise-native": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
