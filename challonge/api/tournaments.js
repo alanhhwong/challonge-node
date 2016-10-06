@@ -98,4 +98,17 @@ export default class Tournaments {
     });
   }
 
+  reset(tid) {
+    let params = {};
+
+    return new Promise((resolve, reject) => {
+      _api.request('POST', 'tournaments/'+tid+'/reset.json', params)
+        .then(function (response) {
+          response.tournament.id === tid ? resolve(response.tournament) : reject('Mistmatch IDs');
+        })
+        .catch(function (err) {
+          reject(err.message);
+        });
+    });
+  }
 }

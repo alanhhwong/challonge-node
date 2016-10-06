@@ -55,6 +55,12 @@ describe('Tournament', function() {
     });
   });
 
+  describe('#reset()', function() {
+    it('should resolve', function() {
+      return challonge.tournaments.reset(tid);
+    });
+  });
+
   describe('#delete()', function() {
     it('should resolve', function() {
       return challonge.tournaments.destroy(tid);
