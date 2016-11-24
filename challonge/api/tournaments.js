@@ -43,9 +43,7 @@ export default class Tournaments {
     });
   }
 
-  show(tid) {
-    let params = {};
-
+  show(tid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('GET', 'tournaments/'+tid+'.json', params)
         .then(function (response) {
