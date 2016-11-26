@@ -8,9 +8,7 @@ export default class Tournaments {
       _api = parent;
   }
 
-  index() {
-    let params = {};
-
+  index(params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('GET', 'tournaments.json', params)
         .then(function (response) {
@@ -82,9 +80,7 @@ export default class Tournaments {
     });
   }
 
-  start(tid) {
-    let params = {};
-
+  start(tid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('POST', 'tournaments/'+tid+'/start.json', params)
         .then(function (response) {
@@ -96,9 +92,7 @@ export default class Tournaments {
     });
   }
 
-  reset(tid) {
-    let params = {};
-
+  reset(tid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('POST', 'tournaments/'+tid+'/reset.json', params)
         .then(function (response) {

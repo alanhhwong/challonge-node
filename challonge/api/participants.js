@@ -8,9 +8,7 @@ export default class Participants {
       _api = parent;
   }
 
-  index(tid) {
-    let params = {};
-
+  index(tid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('GET', 'tournaments/'+tid+'/participants.json', params)
         .then(function (response) {
@@ -66,9 +64,7 @@ export default class Participants {
     });
   }
 
-  delete(tid, pid) {
-    let params = {};
-
+  delete(tid, pid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('DELETE', 'tournaments/'+tid+'/participants/'+pid+'.json', params)
         .then(function (response) {
