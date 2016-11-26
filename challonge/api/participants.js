@@ -41,9 +41,7 @@ export default class Participants {
     });
   }
 
-  show(tid, pid) {
-    let params = {};
-
+  show(tid, pid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('GET', 'tournaments/'+tid+'/participants/'+pid+'.json', params)
         .then(function (response) {
