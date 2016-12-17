@@ -8,9 +8,7 @@ export default class Matches {
       _api = parent;
   }
 
-  index(tid) {
-    let params = {};
-
+  index(tid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('GET', 'tournaments/'+tid+'/matches.json', params)
         .then(function (response) {
@@ -25,9 +23,7 @@ export default class Matches {
     });
   }
 
-  show(tid, mid) {
-    let params = {};
-
+  show(tid, mid, params = {}) {
     return new Promise((resolve, reject) => {
       _api.request('GET', 'tournaments/'+tid+'/matches/'+mid+'.json', params)
         .then(function (response) {

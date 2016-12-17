@@ -4,7 +4,7 @@ A node.js library for [Challonge API](http://api.challonge.com/v1)
 
 ## Requirements
 Tested with:
-* Node 4.4.4
+* Node 6.8.1
 * npm 2.15.1
 
 ### Installation
